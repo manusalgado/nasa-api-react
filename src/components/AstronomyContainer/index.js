@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-
+import AstronomyCard from './../AstronomyCard'
 class AstronomyContainer extends React.Component {
     state = {astronomy: []}
 
@@ -10,16 +10,25 @@ class AstronomyContainer extends React.Component {
 
         axios.get(END_POINT+API_KEY)
                 .then(response => {
-                    console.log(response)
+
+                    this.setState({
+                        astronomy: response.data
+                    })
+                    console.log(this.state.astronomy)
                 })
                 .catch(error => {
                     console.log(error)
                     
                 })
     }
+
     render () {
+
+        const { astronomy } = this.state
         return (
-            <div />
+            <div>
+                <AstronomyCard data={astronomy}/>
+            </div>
         )
     }
 }
