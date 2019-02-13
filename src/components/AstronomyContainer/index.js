@@ -6,9 +6,9 @@ class AstronomyContainer extends React.Component {
 
     componentDidMount () {
         const API_KEY = 'q6OsSmMTqLJIT5cxFFtqf0bZoUCvh9pK10Sfouqu'
-        const END_POINT = 'https://api.nasa.gov/planetary/apod?api_key'
+        const END_POINT = 'https://api.nasa.gov/planetary/apod?api_key='
 
-        axios.get(API_KEY+END_POINT)
+        axios.get(END_POINT+API_KEY)
                 .then(response => {
                     console.log(response)
                 })
