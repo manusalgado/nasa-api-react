@@ -6,13 +6,13 @@ const Header = () => {
     return (
         <Wrapper>
             <div className='container-fluid'>
-                <div className='row'>
-                    <div className='col s12 m2 l2'>
+                <div className='row Wrapper'>
+                    <div className='col s12 m2 l2 Wrapper__image-container'>
                         <a href='/'>
                             <img src={logo} alt='Logo Nasa' width='70'/>
                         </a>
                     </div>
-                    <div className='col s12 m10 l10'>
+                    <div className='col s12 m8 l8 Wrapper__title-container'>
                         <h1>Nasa Photo of the day</h1>
                     </div>
                 </div>
