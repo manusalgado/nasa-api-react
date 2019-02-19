@@ -9,5 +9,8 @@ export const AstronomyCardWrapper = styled.div`
         img {
             width: 100%;
         }
+        iframe {
+            max-width:100%;
+        }
     }
 `
